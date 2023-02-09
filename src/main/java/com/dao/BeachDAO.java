@@ -13,6 +13,7 @@ import com.model.Beach;
 public class BeachDAO {
 	@Autowired
 	BeachRepository beachRepository;
+	Beach beach; 
 	
 	public List<Beach> getAllBeach() {
 		List<Beach> prodList = beachRepository.findAll();
@@ -39,6 +40,12 @@ public class BeachDAO {
 		System.out.println("Delete Product: " + prodId);
 		beachRepository.deleteById(prodId);
 		return "Product Deleted!!!";
+	}
+	
+	public Beach registerUserDao(Beach beach) {
+		if(this.beach==null)
+			return beachRepository.save(beach);
+		return new Beach(-1, null, null,null, null, null, null, null, null, null, null);
 	}
 
 }
