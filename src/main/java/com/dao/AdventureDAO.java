@@ -13,6 +13,7 @@ import com.model.Adventure;
 public class AdventureDAO {
 	@Autowired
 	AdventureRepository adventureRepository;
+	Adventure adventure;
 	
 	public List<Adventure> getAllAdventure() {
 		List<Adventure> prodList = adventureRepository.findAll();
@@ -39,6 +40,12 @@ public class AdventureDAO {
 		System.out.println("Delete Product: " + prodId);
 		adventureRepository.deleteById(prodId);
 		return "Product Deleted!!!";
+	}
+	
+	public Adventure registerUserDao(Adventure adventure) {
+		if(this.adventure==null)
+			return adventureRepository.save(adventure);
+		return new Adventure(-1, null, null,null, null, null, null, null, null, null, null);
 	}
 
 }
