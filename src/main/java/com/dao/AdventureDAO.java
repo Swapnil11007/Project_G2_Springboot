@@ -45,7 +45,13 @@ public class AdventureDAO {
 	public Adventure registerUserDao(Adventure adventure) {
 		if(this.adventure==null)
 			return adventureRepository.save(adventure);
-		return new Adventure(-1, null, null,null, null, null, null, null, null, null, null);
+		return new Adventure(-1, null, null,0, null, null, null, null, null, null, null, null);
+	}
+
+	public void deleteAdventureDAO(int prodId) {
+	
+		adventureRepository.deleteById(prodId);
+		
 	}
 
 }
