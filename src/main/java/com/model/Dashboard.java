@@ -15,10 +15,13 @@ public class Dashboard {
 	private String prodName;
 	private String emailID;
 	private String imgPath;
-	@DateTimeFormat(pattern="yyyy-MM-dd")
+
+	//@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date travelDate;
 	private int quantity;
 	private int totalAmount;
+	private String description;
+
 	
 	public Dashboard() {
 		super();
@@ -26,7 +29,8 @@ public class Dashboard {
 	}
 
 	public Dashboard(int id, String prodName, String emailID, String imgPath, Date travelDate, int quantity,
-			int totalAmount) {
+			int totalAmount, String description) {
+
 		super();
 		this.id = id;
 		this.prodName = prodName;
@@ -35,6 +39,8 @@ public class Dashboard {
 		this.travelDate = travelDate;
 		this.quantity = quantity;
 		this.totalAmount = totalAmount;
+		this.description = description;
+
 	}
 
 	public int getId() {
@@ -93,6 +99,17 @@ public class Dashboard {
 		this.totalAmount = totalAmount;
 	}
 
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+}
+
 	@Override
 	public String toString() {
 		return "Dashboard [id=" + id + ", prodName=" + prodName + ", emailID=" + emailID + ", imgPath=" + imgPath
@@ -101,3 +118,4 @@ public class Dashboard {
 	
 	
 }
+

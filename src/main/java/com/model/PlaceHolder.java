@@ -20,12 +20,15 @@ public class PlaceHolder {
 	private Date travelDate;
 	private int quantity;
 	private int totalAmount;
+	private String description;
+
 	public PlaceHolder() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public PlaceHolder(int id, String prodName, String emailID, String imgPath, Date travelDate, int quantity,
-			int totalAmount) {
+			int totalAmount, String description) {
+
 		super();
 		this.id = id;
 		this.prodName = prodName;
@@ -34,6 +37,9 @@ public class PlaceHolder {
 		this.travelDate = travelDate;
 		this.quantity = quantity;
 		this.totalAmount = totalAmount;
+
+		this.description = description;
+
 	}
 	public int getId() {
 		return id;
@@ -76,5 +82,12 @@ public class PlaceHolder {
 	}
 	public void setTotalAmount(int totalAmount) {
 		this.totalAmount = totalAmount;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }
