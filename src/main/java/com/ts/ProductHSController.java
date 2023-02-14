@@ -1,3 +1,4 @@
+
 package com.ts;
 
 import java.util.List;
@@ -6,19 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dao.DesertDAO;
-import com.model.Desert;
-
-
+import com.dao.ProductHSDAO;
+import com.model.ProductHS;
 
 @RestController
-public class DesertController {
+public class ProductHSController {
+	
 	@Autowired	//Dependency Injection
-	DesertDAO desertDAO;
+	ProductHSDAO prodHSDAO;
 
-	@RequestMapping("/showAllDesert")
-	public List<Desert> showAllDesert() {
-		List<Desert> prodList = desertDAO.getAllDesert();
+	@RequestMapping("/showAllProducts")
+	public List<ProductHS> showAllProducts() {
+		List<ProductHS> prodList = prodHSDAO.getAllProducts();
 		return prodList;
 	}
+	
 }
+	

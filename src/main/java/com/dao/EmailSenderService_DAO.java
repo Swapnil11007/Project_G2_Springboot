@@ -17,7 +17,7 @@ public class EmailSenderService_DAO {
 						  String body){
 		
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("riteshsalunke11@gmail.com");
+		message.setFrom("boundlessadventure8@gmail.com");
 		message.setTo(toEmail);
 		message.setText(body);
 		message.setSubject(subject);
