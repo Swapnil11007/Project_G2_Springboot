@@ -20,7 +20,7 @@ public class UsersDAO {
 
 //		System.out.printf(bcrypt.matches(password, this.user.getPassword()));
 //		user.setPassword(encryptedPwd);
-		if(bcrypt.matches(password,this.user.getPassword()))
+		if(this.user!=null && bcrypt.matches(password,this.user.getPassword()))
 			return usersRepository.usersLogInRepo(emailId, this.user.getPassword());
 //			return new Users(-1, "success", null, null, null);
 		return new Users(-1, null, null, null, null);
