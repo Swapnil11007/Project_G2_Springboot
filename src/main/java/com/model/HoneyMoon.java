@@ -23,10 +23,12 @@ public class HoneyMoon {
 	private String DestinationPrice;
 	private String DestinationPrice1;
 	private String DestinationPrice2;
+
 	public HoneyMoon() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public HoneyMoon(int hmId, String destinationName, String destinationDescription, String destinationPath,
 			String destinationBrief, String destinationAbout, String destinationAbout1, String destinationAbout2,
 			String destinationPrice, String destinationPrice1, String destinationPrice2) {
@@ -43,30 +45,31 @@ public class HoneyMoon {
 		DestinationPrice1 = destinationPrice1;
 		DestinationPrice2 = destinationPrice2;
 	}
-	public int getHmId() {
-		return hmId;
-	}
-	public void setHmId(int hmId) {
-		this.hmId = hmId;
-	}
+
 	public String getDestinationName() {
 		return DestinationName;
 	}
+
 	public void setDestinationName(String destinationName) {
 		DestinationName = destinationName;
 	}
+
 	public String getDestinationDescription() {
 		return DestinationDescription;
 	}
+
 	public void setDestinationDescription(String destinationDescription) {
 		DestinationDescription = destinationDescription;
 	}
+
 	public String getDestinationPath() {
 		return DestinationPath;
 	}
+
 	public void setDestinationPath(String destinationPath) {
 		DestinationPath = destinationPath;
 	}
+
 	public String getDestinationBrief() {
 		return DestinationBrief;
 	}
@@ -109,6 +112,12 @@ public class HoneyMoon {
 	public void setDestinationPrice2(String destinationPrice2) {
 		DestinationPrice2 = destinationPrice2;
 	}
+
+	public int getHmId() {
+		return hmId;
+	}
+
+
 	@Override
 	public String toString() {
 		return "HoneyMoon [hmId=" + hmId + ", DestinationName=" + DestinationName + ", DestinationDescription="

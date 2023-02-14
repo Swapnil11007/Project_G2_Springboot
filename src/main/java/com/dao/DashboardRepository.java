@@ -24,4 +24,6 @@ public interface DashboardRepository extends JpaRepository <Dashboard, Integer>{
 	@Transactional
 	@Query("delete from Dashboard e where e.emailID=:emailID and e.prodName=:prodName")
 	void deleteTripRepo(@Param("emailID") String emailID, @Param("prodName") String prodName);
+
 }
+

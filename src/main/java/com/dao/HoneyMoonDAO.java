@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.model.HoneyMoon;
 
 
@@ -20,4 +19,17 @@ public class HoneyMoonDAO {
 		return prodList;
 	}
 	
+	public HoneyMoon register(HoneyMoon product) {
+		return honeymoonRepository.save(product);
+	}
+
+	public HoneyMoon updateProduct(HoneyMoon product) {
+		return honeymoonRepository.save(product);
+	}
+
+	public String deleteProduct(int prodId) {
+		System.out.println("Delete Product: " + prodId);
+		honeymoonRepository.deleteById(prodId);
+		return "Product Deleted!!!";
+	}
 }

@@ -43,6 +43,7 @@ public class ProductHS {
 		this.productPrice1 = productPrice1;
 		this.productPrice2 = productPrice2;
 	}
+
 	public int getProdId() {
 		return prodId;
 	}
@@ -117,8 +118,6 @@ public class ProductHS {
 				+ productAbout2 + ", productPrice=" + productPrice + ", productPrice1=" + productPrice1
 				+ ", productPrice2=" + productPrice2 + "]";
 	}
-	
-	
 	
 }
 	

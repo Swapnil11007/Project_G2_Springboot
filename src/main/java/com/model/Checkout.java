@@ -18,7 +18,9 @@ public class Checkout {
 	private Date travelDate;
 	private int quantity;
 	private int totalAmount;
+
 	private String description;
+
 	
 	public Checkout() {
 		super();
@@ -27,6 +29,7 @@ public class Checkout {
 
 	public Checkout(int id, String prodName, String emailID, String imgPath, Date travelDate, int quantity,
 			int totalAmount, String description) {
+
 		super();
 		this.id = id;
 		this.prodName = prodName;
@@ -36,6 +39,7 @@ public class Checkout {
 		this.quantity = quantity;
 		this.totalAmount = totalAmount;
 		this.description = description;
+
 	}
 
 	public int getId() {
@@ -102,6 +106,12 @@ public class Checkout {
 		this.description = description;
 	}
 
+
+	@Override
+	public String toString() {
+		return "Checkout [id=" + id + ", prodName=" + prodName + ", emailID=" + emailID + ", imgPath=" + imgPath
+				+ ", travelDate=" + travelDate + ", quantity=" + quantity + ", totalAmount=" + totalAmount + "]";
+	}
 	
 	
 }

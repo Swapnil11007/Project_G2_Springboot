@@ -42,10 +42,4 @@ public class BeachDAO {
 		return "Product Deleted!!!";
 	}
 	
-	public Beach registerUserDao(Beach beach) {
-		if(this.beach==null)
-			return beachRepository.save(beach);
-		return new Beach(-1, null, null,null, null, null, null, null, null, null, null);
-	}
-
 }

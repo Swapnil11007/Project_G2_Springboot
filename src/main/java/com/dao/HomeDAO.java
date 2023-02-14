@@ -30,4 +30,10 @@ public class HomeDAO {
 			return homeRepository.save(home);
 		return new Home(-1, null, null, -1, null,null);
 	}
+
+	public void deleteCatDAO(int id) {
+		
+		homeRepository.deleteById(id);
+		
+	}
 }
