@@ -108,8 +108,6 @@ public class Dashboard {
 		this.description = description;
 	}
 
-}
-
 	@Override
 	public String toString() {
 		return "Dashboard [id=" + id + ", prodName=" + prodName + ", emailID=" + emailID + ", imgPath=" + imgPath
