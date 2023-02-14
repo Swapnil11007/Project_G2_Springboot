@@ -3,8 +3,10 @@ package com.ts;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,6 +42,23 @@ public class HomeController {
 			return "Registration success";
 
 		return "Registration Failed!!!";
+	}
+	
+	@PutMapping("/updateCat")
+	public String updateCat(@RequestBody Home home) {
+
+		Home h = homeDAO.registerUserDao(home);
+
+		if ( h.getId()!=-1 && h != null)
+			return "Update success";
+
+		return "Update Failed!!!";
+	}
+
+	@DeleteMapping("/deleteCat/{id}")
+	public String deleteCat(@PathVariable("id") int id) {
+		homeDAO.deleteCatDAO(id);
+		return "Employee(" + id + ") Record Deleted Successfully!";
 	}
 	
 }
